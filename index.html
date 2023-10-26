@@ -3,12 +3,16 @@
     <title>Convert To Bibytes - Marko2155</title>
     <script>
       const output = 0;
+      document.getElementById("convert").addEventListener("click", function() {
+        output = "Output:" + parseInt(document.getElementById("bytes").innerText);
+        document.getElementById("output").innerText = String(output);
+      });
     </script>
   </head>
   <body>
     <h1>Convert To Bibytes</h1>
-    <input id="bytes">
-    <button onclick="output = parseInt(document.getElementById('bytes').innerText) document.getElementById('output').innerText = 'Output: ' + String(output / 1.074)">Convert</button>
+    <input type="number" id="bytes">
+    <button id="convert">Convert</button>
     <p id="output">Output: 0</p>
   </body>
 </html>
